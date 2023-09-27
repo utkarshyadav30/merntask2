@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Task 4</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div>
+            <div>
+                <button onclick="showDate()">Show date</button>
+                <p id="dateShow"></p>
+            </div>
+            <div>
+                <button onclick="showTime()">Show time</button>
+                <p id="timeShow"></p>
+            </div>
+        </div>
+    </body>
+    <script>
+        function showDate(){
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+                ];
+            var today = new Date
+            document.getElementById("dateShow").innerHTML = `<p>${today.getDate() + '/' + monthNames[today.getMonth()-1] + '/' + today.getFullYear()}</p>`
+        }
+        function showTime(){
+            document.getElementById("timeShow").innerHTML = `<p>${new Date}</p>`
+            
+        }
+    </script>
+</html>
